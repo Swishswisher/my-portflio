@@ -1,0 +1,30 @@
+{
+  "root": true,
+  "api": {
+    "projectId": "c93intz5",
+    "dataset": "production"
+  },
+  "project": {
+    "name": "david_portfolio"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "tags"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    }
+  ]
+}
