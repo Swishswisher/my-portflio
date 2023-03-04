@@ -1,75 +1,64 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { images } from '../../constants';
-
+import React, { useState, useEffect } from 'react';
 import { AppWrap } from '../../wrapper';
 
 import './Header.scss';
 
-const scaleVariants = {
-  whileInView: {
-    scale: [0, 1],
-    opacity: [0, 1],
-    transition: {
-      duration: 1,
-      ease: 'easeInOut',
-    }
-  }
-}
-
 const Header = () => {
-  return (
-    <div className="app__header app__flex">
-      <motion.div
-        whileInView={{ x: [-100, 0 ], opacity: [0, 1] }}
-        transition={{ duration: 0.9}}
-        className="app__header-info"
-      >
-        <div className="app__header-badge">
-          <div className="badge-cmp app__flex">
-            <span>👋🏾</span>
-            <div style={{ marginLeft: 20 }}>
-              <p className="p-text">Hello, I am</p>
-              <h1 className="head-text">Akim</h1>
-            </div>
-          </div>
 
+  // const [texts, setTexts] = useState([])
+
+  // useEffect(() => {
+  //   const timeoutIds = []
+
+  //   [ "Hello 👋🏾 and welcome", 
+  //     "I am Akim", 
+  //     "A Freelance Web Developer", 
+  //     "Let's work together and create something beautiful", 
+  //     "Scroll for more information"].forEach((text, i) => {
+  //       const timeoutId = setTimeout(() => {
+  //         setTexts((prev) => [...prev, text])
+  //       }, 1000 * i)
+
+  //       timeoutIds.push(timeoutId)
+  //   })
+
+  //   return () => {
+  //     timeoutIds.forEach((id) => clearTimeout(id))
+  //   }
+  // }, [])
+
+
+  return (
+    // <div className="app__header app__flex">
+    //     <div className="app__header-badge">
+    //       <div className="tag-cmp app__flex">
+    //         {texts.map((text) => {
+    //           return (
+    //             <p key={text} className="p-text">{text}</p>
+    //           )
+    //         })}
+    //       </div>
+    //     </div>
+    // </div>
+
+    <div className="app__header app__flex">
+        <div className="app__header-badge">
           <div className="tag-cmp app__flex">
-            <p className="p-text">Web Developer</p>
-            <p className="p-text">Freelancer</p>
+            <p className="p-text">Hello 👋🏾 and welcome</p>
+          </div>
+          <div className="tag-cmp app__flex">
+            <p className="p-text">I am Akim</p>
+          </div>
+          <div className="tag-cmp app__flex">
+            <p className="p-text">A Freelance Web Developer</p>
+          </div>
+          <div className="tag-cmp app__flex">
+            <p className="p-text">Let's work together and create something beautiful</p>
+          </div>
+          <div className="tag-cmp app__flex">
+            <p className="p-text">Scroll for more information</p>
           </div>
         </div>
-      </motion.div>
-
-      <motion.div
-        whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 0.9, delayChildren: 0.5 }}
-        className= "app__header-img"
-      >
-        <img src={images.profile} alt="profile_bg" />
-        {/* <motion.img
-          whileInView={{ scale: [0, 1] }}
-          transition={{ duration: 1, ease: 'easeInOut' }}
-          // src={images.circle}
-          // alt="profile_circle"
-          className="overlay_circle"
-        />                 */}
-      </motion.div>
-
-      <motion.div
-        variant={scaleVariants}
-        whileInView = {scaleVariants.whileInView}
-        className= "app__header-circles"
-      >
-        {/* {[images.flutter, images.redux, images.sass].map((circle, index) => (
-          <div className= "circle-cmp app__flex" key={'circle-${index}'}>
-            <img src={circle} alt="circle" />
-          </div>
-           
-        ))} */}
-
-      </motion.div>
-
     </div>
   )
 }

@@ -14,12 +14,12 @@ export default {
             type: 'string',
         },
         {
-            name: 'project_link',
+            name: 'projectLink',
             title: 'Project_Link',
             type: 'string',
         },
         {
-            name: 'code_link',
+            name: 'codeLink',
             title: 'Code_Link',
             type: 'string',
         },
