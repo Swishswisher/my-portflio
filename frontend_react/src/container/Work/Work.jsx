@@ -40,6 +40,7 @@ const Work = () => {
   return (
     <>
       <h2 className="head-text">My creative <span> portfolio </span></h2>
+      <p className="app__work-h4">As you <span>hover</span>  over the project cards, click on the eye icon to view the project website and on the GitHub icon to view the source code on my GitHub account</p>
 
       <div className="app__work-filter">
         {['UI/UX', 'Web App', 'Mobile App', 'React Js', 'Web Design', 'All' ].map((item, index) => (
