@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
-
+// import { Popup }  from '../../components/Popup/Popup'
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Work.scss';
@@ -104,6 +104,9 @@ const Work = () => {
           </div>
         ))}
       </motion.div>
+      {/* <Popup>
+        <h3>My popup</h3>
+      </Popup> */}
     </>
   )
 }
